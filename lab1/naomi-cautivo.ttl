@@ -1,0 +1,30 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix entidad: <http://naomicautivobahamondez.cl/entidad/> .
+@prefix ontologia: <http://naomicautivobahamondez.cl/ontologia/> .
+
+<#yo> a foaf:Person ;
+	foaf:name "Naomi Muriel Cautivo Bahamondez" ;
+	foaf:mbox <mailto:naocautivo@gmail.com> ;
+	foaf:img <https://i.pinimg.com/564x/81/52/1b/81521b678ca8afbfd1c52ff182a736a4.jpg> ;
+	foaf:homepage <https://www.linkedin.com/in/ncautivob/> ;
+	foaf:knows <http://maximofloresvalenzuela.cl>, <http://gonzalosobarzoabufon.cl> .
+
+entidad:yo a ontologia:Estudiante ;
+	foaf:name "Naomi Muriel Cautivo Bahamondez" ;
+	foaf:mbox <mailto:naocautivo@gmail.com> ;
+	foaf:img <https://i.pinimg.com/564x/81/52/1b/81521b678ca8afbfd1c52ff182a736a4.jpg> ;
+	foaf:homepage <https://www.linkedin.com/in/ncautivob/> ;
+	foaf:knows <http://maximofloresvalenzuela.cl>, <http://gonzalosobarzoabufon.cl> ;
+	ontologia:estudiaEn <https://www.wikidata.org/wiki/Q232141> .
+
+ontologia:Estudiante rdfs:subClassOf foaf:Person ;
+	rdfs:label "Estudiante"@es ;
+	rdfs:comment "Es un estudiante"@es .
+
+ontologia:estudiaEn a rdf:Property ;
+	rdfs:label "Estudia en"@es ;
+	rdfs:comment "Define donde estudia el estudiante"@es ;
+	rdfs:domain ontologia:Estudiante ;
+	rdfs:range foaf:Organization .
