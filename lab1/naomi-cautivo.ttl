@@ -4,13 +4,6 @@
 @prefix entidad: <http://naomicautivobahamondez.cl/entidad/> .
 @prefix ontologia: <http://naomicautivobahamondez.cl/ontologia/> .
 
-<#yo> a foaf:Person ;
-	foaf:name "Naomi Muriel Cautivo Bahamondez" ;
-	foaf:mbox <mailto:naocautivo@gmail.com> ;
-	foaf:img <https://i.pinimg.com/564x/81/52/1b/81521b678ca8afbfd1c52ff182a736a4.jpg> ;
-	foaf:homepage <https://www.linkedin.com/in/ncautivob/> ;
-	foaf:knows <http://maximofloresvalenzuela.cl>, <http://gonzalosobarzoabufon.cl> .
-
 entidad:yo a ontologia:Estudiante ;
 	foaf:name "Naomi Muriel Cautivo Bahamondez" ;
 	foaf:mbox <mailto:naocautivo@gmail.com> ;
